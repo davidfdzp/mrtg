@@ -1,5 +1,4 @@
-# mrtg
-MRTG configuration files and scripts
+# MRTG configuration files and scripts
 
 Install MRTG (https://oss.oetiker.ch/mrtg)
 
@@ -15,11 +14,16 @@ http://www.satsignal.eu/ntp/NTPandMRTG.html
 Monitor your Internet access quality with speedtest CLI:
 https://www.howtoforge.com/tutorial/check-internet-speed-with-speedtest-cli-on-ubuntu/#how-to-test-internet-connection-speed-with-speedtestcli
 
-# Monitor your Internet access speed each two hours on the minute 30
+## Monitor your Internet access speed each two hours on the minute 30
+
 crontab -e
+
 30 */2 * * *  /usr/local/bin/speedtest-cli --simple >> /tmp/speedlog.txt
 
-# Launch MRTG with two configurations also with crontab
+## Launch MRTG with two configurations also with crontab
+
 crontab -e
+
 */30 * * * *  mrtg /root/mrtg.cfg
+
 0 */2 * * * mrtg /root/mrtg_speedtest.cfg
