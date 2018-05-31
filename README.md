@@ -26,4 +26,6 @@ crontab -e
 
 */30 * * * *  mrtg /root/mrtg.cfg
 
-0 */2 * * * mrtg /root/mrtg_speedtest.cfg
+0 */2 * * * mrtg /root/mrtg_speedtest.cfg --logging /var/log/mrtg/mrtg_speedtest.log
+
+An alternative to the logging option is to grep mrtg /var/log/syslog
