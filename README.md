@@ -8,6 +8,9 @@ https://kb.op5.com/display/HOWTOs/Configure+a+Linux+server+for+SNMP+monitoring
 Generate MRTG configuration files (or adapt the ones I have in this repository):
 https://fr.opensuse.org/Statistiques_avec_mrtg
 
+If you want to monitor with MRTG something which does not provide data via SNMP, you can use some external program to do the data gathering:
+http://www.homepages.ed.ac.uk/bbyers/config.html
+
 NTP monitoring with MRTG:
 http://www.satsignal.eu/ntp/NTPandMRTG.html
 
