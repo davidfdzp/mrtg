@@ -21,14 +21,14 @@ https://www.howtoforge.com/tutorial/check-internet-speed-with-speedtest-cli-on-u
 
 crontab -e
 
-30 */2 * * *  /usr/local/bin/speedtest-cli --simple >> /tmp/speedlog.txt
+30 */2 * * *  /usr/bin/speedtest-cli --simple >> /tmp/speedlog.txt
 
 ## Launch MRTG with two configurations also with crontab
 
 crontab -e
 
-*/30 * * * *  mrtg /root/mrtg.cfg
+*/30 * * * *  env LANG=C mrtg /root/mrtg.cfg
 
-*/30 * * * * mrtg /root/mrtg_speedtest.cfg
+*/30 * * * * env LANG=C mrtg /root/mrtg_speedtest.cfg
 
 Take into account that MRTG rateup will put 'unknown' or zero if it doesn’t get more than 50% of the samples for a given 5 minutes interval: http://mrtg.oetiker.narkive.com/X44tptJ7/mrtg-intermittently-recording-zero-values-instead-of-valid-values
